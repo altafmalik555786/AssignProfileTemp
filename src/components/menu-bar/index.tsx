@@ -5,7 +5,6 @@ import 'antd/dist/antd.css'
 import { NavLink } from 'react-router-dom'
 import { constRoute } from '../../utils/route/index'
 
-
 function MenuBar() {
     const itemsList = [
         { label: 'item 1', key: 'item-1' },
@@ -18,20 +17,18 @@ function MenuBar() {
     ]
 
     return (
-        <div style={{ height: "10vh" }} >
+        <div style={{ height: '10vh' }}>
             <NavLink className={style.Logo} to={constRoute.dashboard}>
                 Kodecolor
             </NavLink>
-            <Menu mode='horizontal' items={itemsList} >
+            <Menu mode="horizontal" items={itemsList}>
                 <NavLink className={style.Logo} to={constRoute.dashboard}>
-
-                    Kodecolor </NavLink>5
+                    Kodecolor{' '}
+                </NavLink>
+                5
             </Menu>
         </div>
     )
 }
 
 export default MenuBar
-
-
-
