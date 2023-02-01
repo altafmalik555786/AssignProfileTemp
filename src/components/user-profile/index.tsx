@@ -4,6 +4,7 @@ import style from './style.module.scss'
 import profilePic from '@assets/images/profile.png'
 import Heading from './common/heading'
 import CustomButton from '@components/common/custom-button'
+import Header from './menu'
 
 const UserProfile = () => {
 
@@ -27,31 +28,32 @@ const UserProfile = () => {
 
 
     return (
+        <>
         <div className={style.profilePageContainer} >
+            <Header/>
+            <div className={style.container}>
             <Row>
-                <Col span={8} className={style.firstCol} >
+                <Col md={9} sm={24} xs={24} className={style.firstCol} >
                     <Row>
                         <img src={profilePic} />
                     </Row>
-
-                    <Heading heading={'WORK'} />
+                    <div className={style.heading}>
+                        <Heading heading={'WORK'} />
+                        <hr />
+                    </div>
 
                     <Row className={style.workContainter} >
                         {
                             workList?.length > 0 && workList?.map((item, index) => {
                                 return (
                                     <Col span={24} key={index} >
-                                        <Row>
-                                            <Col xl={16}   >
+                                        <div className={style.placeName}>
                                                 <h1>{item?.title || '----'}</h1>
-                                            </Col>
-                                            <Col xl={8}  >
                                                 <CustomButton
                                                     title={item?.periority}
                                                     className={style.btnPeriorityStyle}
                                                 />
-                                            </Col>
-                                        </Row>
+                                        </div>
                                         <div className={style.addressContainer} >
                                             <Heading heading={item?.addressOne} className={style.workAddress} />
                                             <Heading heading={item?.addressTwo} className={style.workAddress} />
@@ -61,14 +63,16 @@ const UserProfile = () => {
                             })
                         }
                     </Row>
-
-                    <Heading heading={'Skills'} />
+                    <div className={style.heading}>
+                        <Heading heading={'SKILLS'} />
+                        <hr />
+                    </div>
 
                     <div>
                         {
                             skillsLit?.length > 0 && skillsLit?.map((item, index) => {
                                 return (
-                                    <h4 className={ style.skillsList } key={index} >  {item} </h4>
+                                    <h4 className={style.skillsList} key={index} >  {item} </h4>
                                 )
                             })
                         }
@@ -76,12 +80,14 @@ const UserProfile = () => {
 
 
                 </Col>
-                <Col span={16}>
+                <Col span={1}></Col>
+                <Col md={14} sm={24} xs={24}>
 
                 </Col>
             </Row>
-
+            </div>
         </div>
+        </>
     )
 }
 
