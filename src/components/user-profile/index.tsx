@@ -64,7 +64,7 @@ const UserProfile = () => {
                         }
                     </Row>
                     <div className={style.heading}>
-                        <Heading heading={'Skills'} />
+                        <Heading heading={'SKILLS'} />
                         <hr />
                     </div>
 
