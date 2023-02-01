@@ -1,0 +1,62 @@
+.profilePageContainer {
+    border-top: 2px solid #EDEDED;
+    width: 100%;
+    height: 1000px max-content;
+    padding: 80px;
+    padding-bottom: 100px;
+
+
+    .firstCol {
+        border: 2px solid blue;
+        padding: 0px 50px;
+
+
+       img {
+           width: 100%;
+           margin-bottom: 40px;
+       }
+
+        .workContainter {
+           
+            h1 {
+                color: #4D535B;
+                display: inline;
+                line-height: initial;
+            }
+        
+            .btnPeriorityStyle {
+                background-color: #DDEDFB;
+                color: #6B99BF;
+                float: right;
+                border: none;
+                margin-top: 10px;
+            }
+
+            .addressContainer {
+
+                margin: 20px 0;
+            
+                .workAddress {
+                    padding: 0;
+                    margin: 0;
+                    font-size: large;
+                }
+            }
+        }
+    
+        .skillsList {
+            color: hsl(214, 8%, 33%);
+            line-height: initial;
+            font-weight: bold;
+        }
+    
+    
+    
+    }
+
+
+  
+
+
+
+}

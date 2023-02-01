@@ -3,5 +3,6 @@ export const constRoute = {
   contact_us: '/contactus',
   login: '/login',
   register: '/register',
-  about: '/about'
+  about: '/about',
+  userProfile: '/profile',
 }
