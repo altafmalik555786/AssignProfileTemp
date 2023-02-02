@@ -18,10 +18,10 @@ function MenuBar() {
 
 
     return (
-        <div style={{ height: '10vh' }}>
-            <Menu mode="horizontal" items={itemsList} onClick={(e) => {
+        <div style={{ height: '0vh' }}>
+            {/* <Menu mode="horizontal" items={itemsList} onClick={(e) => {
                 changeNavigate(e)
-            }} />
+            }} /> */}
         </div>
     )
 }
